@@ -1,9 +1,9 @@
 $(document).ready(function () {
-
 	
 
 	var timesClicked = 0; 
 	var timesWord = "";
+	var clickCount; 
 
     $('.main-pic').on('click', function() {
     	timesClicked++;
@@ -19,11 +19,18 @@ $(document).ready(function () {
 
     });
 
-    /* $('.cat').on('click', 'img', function(e) {
+     $('.cat').on('click', 'img', function(e) {
     	var currentImg = $(this);
 
+        clickCount = currentImg.data('clickCount');
+        console.log(clickCount);
+
+    	currentImg.data('clickCount', ++clickCount);
+    	console.log(clickCount);
+
+
     	currentImg.prev().html('I was clicked ' + timesClicked + ' ' + timesWord);
-    })   */
+    })   
 
 
 
