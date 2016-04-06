@@ -1,10 +1,23 @@
-.main-pic {
 
-  
 
+.name, .message, .cats-names {
+    font-size: 30px;
+    text-align: center;
 }
 
-.main-text {
+.cats {
+	float: left;
+	padding-left: 200px;
+	padding-right: 50px;
+	padding-top: 50px;
+	}
 
-font-size: 50px;
+.cat-info {
+    float: left;
+    padding-left: 150px;
+}
+
+.cats-names {
+	list-style-type: none;
+	padding: 25px;
 }
