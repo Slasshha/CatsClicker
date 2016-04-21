@@ -29,7 +29,7 @@ var model = {
 	{
 		name: 'Amber',
 		clickCount: 0,
-		picSource: 'https://www.worldsbestcatlitter.com/clearing-the-air/wp-content/uploads/2014/04/WBCL_web_2014_blog_outdoor-cat-safe.jpg"'
+		picSource: 'https://www.worldsbestcatlitter.com/clearing-the-air/wp-content/uploads/2014/04/WBCL_web_2014_blog_outdoor-cat-safe.jpg'
 
 	}
 	],
@@ -76,9 +76,9 @@ var appView = {
 
 	init: function() {
 		this.catSection = document.getElementsByClassName('cat-info');
-		this.catName = document.getElementsByClassName('name');
+		this.catName = document.getElementsByClassName('name')[0];
 		this.catImg = document.getElementById('image');
-		this.countMessage = document.getElementsByClassName('message');
+		this.countMessage = document.getElementsByClassName('message')[0];
 
 
 
@@ -103,7 +103,7 @@ var appViewList = {
 
 	init: function() {
 
-		this.catsList = document.getElementsByClassName('cats');
+		this.catsList = document.getElementsByClassName('cats')[0];
 
 		this.update();
 	},
@@ -133,5 +133,6 @@ var appViewList = {
 		}
 	}
 };
-
-appController.init();
+ window.onload = function() {
+	appController.init();
+}
